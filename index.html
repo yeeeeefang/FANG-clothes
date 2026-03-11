@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FANG · 時尚精品</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">FANG</div>
+    <ul class="nav__links">
+      <li><a href="#" data-hover="新品">新品</a></li>
+      <li><a href="#" data-hover="女裝">女裝</a></li>
+      <li><a href="#" data-hover="男裝">男裝</a></li>
+      <li><a href="#" data-hover="配件">配件</a></li>
+      <li><a href="#" data-hover="Sale">Sale</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="nav__icon" aria-label="搜尋">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="nav__icon" aria-label="帳戶">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="nav__icon nav__cart" aria-label="購物車">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="nav__cart-count">3</span>
+      </button>
+      <button class="nav__burger" id="burgerBtn" aria-label="選單">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#">新品</a></li>
+      <li><a href="#">女裝</a></li>
+      <li><a href="#">男裝</a></li>
+      <li><a href="#">配件</a></li>
+      <li><a href="#">Sale</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg">
+      <div class="hero__grain"></div>
+      <div class="hero__overlay"></div>
+      <!-- Geometric decorative elements -->
+      <div class="hero__circle"></div>
+      <div class="hero__line hero__line--v"></div>
+      <div class="hero__line hero__line--h"></div>
+    </div>
+    <div class="hero__content">
+      <span class="hero__eyebrow">2025 春夏系列</span>
+      <h1 class="hero__title">
+        <span class="hero__title-line">時光之</span>
+        <span class="hero__title-line hero__title-line--italic">紗</span>
+      </h1>
+      <p class="hero__sub">輕盈的輪廓，細膩的工藝，<br>穿越每個當下的優雅姿態。</p>
+      <div class="hero__cta-group">
+        <a href="#" class="btn btn--primary">探索系列</a>
+        <a href="#" class="btn btn--ghost">查看 Lookbook</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>SCROLL</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+    <div class="hero__images">
+      <div class="hero__img hero__img--1">
+        <div class="hero__img-inner" style="background: linear-gradient(135deg, #c9b89a 0%, #a89270 100%);">
+          <div class="product-silhouette product-silhouette--dress"></div>
+        </div>
+        <div class="hero__img-tag">新品到貨</div>
+      </div>
+      <div class="hero__img hero__img--2">
+        <div class="hero__img-inner" style="background: linear-gradient(135deg, #b8c4c0 0%, #8fa39e 100%);">
+          <div class="product-silhouette product-silhouette--coat"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker__track">
+      <span>全台免運 NT$2000以上</span>
+      <span class="ticker__dot">✦</span>
+      <span>新會員享九折優惠</span>
+      <span class="ticker__dot">✦</span>
+      <span>春夏系列正式上線</span>
+      <span class="ticker__dot">✦</span>
+      <span>全台免運 NT$2000以上</span>
+      <span class="ticker__dot">✦</span>
+      <span>新會員享九折優惠</span>
+      <span class="ticker__dot">✦</span>
+      <span>春夏系列正式上線</span>
+      <span class="ticker__dot">✦</span>
+      <span>全台免運 NT$2000以上</span>
+      <span class="ticker__dot">✦</span>
+      <span>新會員享九折優惠</span>
+      <span class="ticker__dot">✦</span>
+    </div>
+  </div>
+
+  <!-- FEATURED CATEGORIES -->
+  <section class="categories section">
+    <div class="section__header">
+      <span class="section__label">精選品類</span>
+      <h2 class="section__title">穿出您的風格</h2>
+    </div>
+    <div class="categories__grid">
+      <div class="category-card category-card--large">
+        <div class="category-card__bg" style="background: linear-gradient(160deg, #e8ddd0 0%, #c4aa8a 100%);">
+          <div class="category-card__silhouette cat-sil--woman"></div>
+        </div>
+        <div class="category-card__content">
+          <h3>女裝</h3>
+          <span>126 件商品</span>
+          <a href="#" class="category-card__link">立即選購 →</a>
+        </div>
+      </div>
+      <div class="category-card">
+        <div class="category-card__bg" style="background: linear-gradient(160deg, #d0d8e0 0%, #8a9cb0 100%);">
+          <div class="category-card__silhouette cat-sil--man"></div>
+        </div>
+        <div class="category-card__content">
+          <h3>男裝</h3>
+          <span>84 件商品</span>
+          <a href="#" class="category-card__link">立即選購 →</a>
+        </div>
+      </div>
+      <div class="category-card">
+        <div class="category-card__bg" style="background: linear-gradient(160deg, #e0d4d0 0%, #b09088 100%);">
+          <div class="category-card__silhouette cat-sil--bag"></div>
+        </div>
+        <div class="category-card__content">
+          <h3>配件</h3>
+          <span>58 件商品</span>
+          <a href="#" class="category-card__link">立即選購 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section class="products section" id="new">
+    <div class="section__header">
+      <span class="section__label">New Arrivals</span>
+      <h2 class="section__title">本季新品</h2>
+      <a href="#" class="section__more">查看全部</a>
+    </div>
+    <div class="products__grid">
+
+      <div class="product-card" data-index="0">
+        <div class="product-card__media">
+          <div class="product-card__img" style="background: linear-gradient(135deg, #d4c5b0 0%, #b8a68a 100%);">
+            <div class="prod-sil prod-sil--dress1"></div>
+          </div>
+          <div class="product-card__img product-card__img--hover" style="background: linear-gradient(135deg, #c8bfb5 0%, #a89e94 100%);">
+            <div class="prod-sil prod-sil--dress1" style="transform: rotate(-5deg) scale(0.95);"></div>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__wish" title="加入收藏">♡</button>
+            <button class="product-card__quick">快速加入</button>
+          </div>
+          <span class="product-card__badge">New</span>
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__meta">
+            <span class="product-card__brand">FANG Studio</span>
+            <div class="product-card__colors">
+              <span class="color-dot" style="background:#c4a882"></span>
+              <span class="color-dot" style="background:#8a8a7a"></span>
+              <span class="color-dot" style="background:#d4c4b8"></span>
+            </div>
+          </div>
+          <h4 class="product-card__name">輕盈飄逸長裙</h4>
+          <div class="product-card__price">
+            <span class="price-current">NT$ 4,580</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="1">
+        <div class="product-card__media">
+          <div class="product-card__img" style="background: linear-gradient(135deg, #b8c8c0 0%, #8aa89c 100%);">
+            <div class="prod-sil prod-sil--coat1"></div>
+          </div>
+          <div class="product-card__img product-card__img--hover" style="background: linear-gradient(135deg, #a0b5ae 0%, #7a9990 100%);">
+            <div class="prod-sil prod-sil--coat1" style="transform: rotate(5deg) scale(0.95);"></div>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__wish" title="加入收藏">♡</button>
+            <button class="product-card__quick">快速加入</button>
+          </div>
+          <span class="product-card__badge product-card__badge--sale">Sale</span>
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__meta">
+            <span class="product-card__brand">Atelier M</span>
+            <div class="product-card__colors">
+              <span class="color-dot" style="background:#8aa89c"></span>
+              <span class="color-dot" style="background:#c4b8a0"></span>
+            </div>
+          </div>
+          <h4 class="product-card__name">羊毛混紡長版外套</h4>
+          <div class="product-card__price">
+            <span class="price-current">NT$ 8,900</span>
+            <span class="price-original">NT$ 12,800</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="2">
+        <div class="product-card__media">
+          <div class="product-card__img" style="background: linear-gradient(135deg, #e0d0c0 0%, #c8b8a0 100%);">
+            <div class="prod-sil prod-sil--shirt1"></div>
+          </div>
+          <div class="product-card__img product-card__img--hover" style="background: linear-gradient(135deg, #d8c8b8 0%, #c0a888 100%);">
+            <div class="prod-sil prod-sil--shirt1" style="transform: rotate(-3deg);"></div>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__wish" title="加入收藏">♡</button>
+            <button class="product-card__quick">快速加入</button>
+          </div>
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__meta">
+            <span class="product-card__brand">FANG Studio</span>
+            <div class="product-card__colors">
+              <span class="color-dot" style="background:#e8e0d8"></span>
+              <span class="color-dot" style="background:#2a2a28"></span>
+              <span class="color-dot" style="background:#c09070"></span>
+            </div>
+          </div>
+          <h4 class="product-card__name">寬鬆亞麻上衣</h4>
+          <div class="product-card__price">
+            <span class="price-current">NT$ 2,380</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="3">
+        <div class="product-card__media">
+          <div class="product-card__img" style="background: linear-gradient(135deg, #c8c0d8 0%, #a098b8 100%);">
+            <div class="prod-sil prod-sil--pants1"></div>
+          </div>
+          <div class="product-card__img product-card__img--hover" style="background: linear-gradient(135deg, #b8b0c8 0%, #9088a8 100%);">
+            <div class="prod-sil prod-sil--pants1" style="transform: rotate(3deg) scale(0.95);"></div>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__wish" title="加入收藏">♡</button>
+            <button class="product-card__quick">快速加入</button>
+          </div>
+          <span class="product-card__badge">New</span>
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__meta">
+            <span class="product-card__brand">Atelier M</span>
+            <div class="product-card__colors">
+              <span class="color-dot" style="background:#a098b8"></span>
+              <span class="color-dot" style="background:#b8c0b0"></span>
+              <span class="color-dot" style="background:#d0c0a8"></span>
+            </div>
+          </div>
+          <h4 class="product-card__name">高腰寬管褲</h4>
+          <div class="product-card__price">
+            <span class="price-current">NT$ 3,280</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDITORIAL BANNER -->
+  <section class="editorial">
+    <div class="editorial__left">
+      <div class="editorial__img-wrap">
+        <div class="editorial__img" style="background: linear-gradient(160deg, #1a1814 0%, #3a3228 60%, #2a2420 100%);">
+          <div class="editorial__figure"></div>
+        </div>
+        <div class="editorial__accent-box"></div>
+      </div>
+    </div>
+    <div class="editorial__right">
+      <span class="section__label">編輯精選</span>
+      <h2 class="editorial__title">夜的<br><em>輪廓</em></h2>
+      <p class="editorial__body">在光影交錯之間，找到屬於你的存在感。每一件單品都經過精心設計，以最細膩的工藝呈現最優雅的輪廓。</p>
+      <ul class="editorial__list">
+        <li>✦ 100% 有機棉材質</li>
+        <li>✦ 手工縫製細節</li>
+        <li>✦ 永續時尚承諾</li>
+      </ul>
+      <a href="#" class="btn btn--dark">探索夜間系列</a>
+    </div>
+  </section>
+
+  <!-- BESTSELLERS -->
+  <section class="products section">
+    <div class="section__header">
+      <span class="section__label">Bestsellers</span>
+      <h2 class="section__title">熱銷排行</h2>
+      <a href="#" class="section__more">查看全部</a>
+    </div>
+    <div class="products__grid">
+
+      <div class="product-card" data-index="0">
+        <div class="product-card__media">
+          <div class="product-card__img" style="background: linear-gradient(135deg, #d8c0b0 0%, #c0a090 100%);">
+            <div class="prod-sil prod-sil--bag1"></div>
+          </div>
+          <div class="product-card__img product-card__img--hover" style="background: linear-gradient(135deg, #c8b0a0 0%, #b09080 100%);">
+            <div class="prod-sil prod-sil--bag1" style="transform: rotate(-5deg);"></div>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__wish" title="加入收藏">♡</button>
+            <button class="product-card__quick">快速加入</button>
+          </div>
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__brand">FANG Accessories</span>
+          <h4 class="product-card__name">皮革托特包</h4>
+          <div class="product-card__price"><span class="price-current">NT$ 12,800</span></div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="1">
+        <div class="product-card__media">
+          <div class="product-card__img" style="background: linear-gradient(135deg, #c0c8d0 0%, #98a8b8 100%);">
+            <div class="prod-sil prod-sil--jacket1"></div>
+          </div>
+          <div class="product-card__img product-card__img--hover" style="background: linear-gradient(135deg, #b0b8c0 0%, #8898a8 100%);">
+            <div class="prod-sil prod-sil--jacket1" style="transform: rotate(4deg);"></div>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__wish" title="加入收藏">♡</button>
+            <button class="product-card__quick">快速加入</button>
+          </div>
+          <span class="product-card__badge">熱賣</span>
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__brand">Atelier M</span>
+          <h4 class="product-card__name">修身西裝外套</h4>
+          <div class="product-card__price"><span class="price-current">NT$ 9,800</span></div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="2">
+        <div class="product-card__media">
+          <div class="product-card__img" style="background: linear-gradient(135deg, #e8d8c8 0%, #d0b89c 100%);">
+            <div class="prod-sil prod-sil--scarf1"></div>
+          </div>
+          <div class="product-card__img product-card__img--hover" style="background: linear-gradient(135deg, #d8c8b8 0%, #c0a88c 100%);">
+            <div class="prod-sil prod-sil--scarf1" style="transform: rotate(-4deg);"></div>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__wish" title="加入收藏">♡</button>
+            <button class="product-card__quick">快速加入</button>
+          </div>
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__brand">FANG Accessories</span>
+          <h4 class="product-card__name">喀什米爾圍巾</h4>
+          <div class="product-card__price"><span class="price-current">NT$ 6,200</span></div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="3">
+        <div class="product-card__media">
+          <div class="product-card__img" style="background: linear-gradient(135deg, #d0c8e0 0%, #b0a8c8 100%);">
+            <div class="prod-sil prod-sil--dress2"></div>
+          </div>
+          <div class="product-card__img product-card__img--hover" style="background: linear-gradient(135deg, #c0b8d0 0%, #a098b8 100%);">
+            <div class="prod-sil prod-sil--dress2" style="transform: rotate(3deg) scale(0.95);"></div>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__wish" title="加入收藏">♡</button>
+            <button class="product-card__quick">快速加入</button>
+          </div>
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__brand">FANG Studio</span>
+          <h4 class="product-card__name">絲質連身裙</h4>
+          <div class="product-card__price">
+            <span class="price-current">NT$ 7,400</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INSTAGRAM / LOOKBOOK -->
+  <section class="lookbook section">
+    <div class="section__header">
+      <span class="section__label">@FANG_tw</span>
+      <h2 class="section__title">穿搭靈感</h2>
+    </div>
+    <div class="lookbook__grid">
+      <div class="lookbook__item lookbook__item--tall">
+        <div class="lookbook__bg" style="background: linear-gradient(135deg, #c8b8a8 0%, #a89880 60%, #988870 100%);">
+          <div class="look-fig look-fig--1"></div>
+        </div>
+        <div class="lookbook__hover">
+          <span>♡ 2.4K</span>
+        </div>
+      </div>
+      <div class="lookbook__item">
+        <div class="lookbook__bg" style="background: linear-gradient(135deg, #b8c8c0 0%, #98b0a8 100%);">
+          <div class="look-fig look-fig--2"></div>
+        </div>
+        <div class="lookbook__hover"><span>♡ 1.8K</span></div>
+      </div>
+      <div class="lookbook__item">
+        <div class="lookbook__bg" style="background: linear-gradient(135deg, #d8c8b8 0%, #b8a898 100%);">
+          <div class="look-fig look-fig--3"></div>
+        </div>
+        <div class="lookbook__hover"><span>♡ 3.1K</span></div>
+      </div>
+      <div class="lookbook__item lookbook__item--wide">
+        <div class="lookbook__bg" style="background: linear-gradient(135deg, #c0c0d0 0%, #a0a0c0 100%);">
+          <div class="look-fig look-fig--4"></div>
+        </div>
+        <div class="lookbook__hover"><span>♡ 2.7K</span></div>
+      </div>
+      <div class="lookbook__item">
+        <div class="lookbook__bg" style="background: linear-gradient(135deg, #d0c0b0 0%, #b0a090 100%);">
+          <div class="look-fig look-fig--5"></div>
+        </div>
+        <div class="lookbook__hover"><span>♡ 1.5K</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="newsletter__deco newsletter__deco--tl"></div>
+    <div class="newsletter__deco newsletter__deco--br"></div>
+    <div class="newsletter__content">
+      <span class="section__label">會員專屬</span>
+      <h2 class="newsletter__title">訂閱，<em>優先體驗</em></h2>
+      <p>加入 FANG 會員，搶先獲得新品資訊、獨家優惠與限定活動邀請。</p>
+      <div class="newsletter__form">
+        <input type="email" placeholder="您的電子郵件地址" />
+        <button class="btn btn--primary">訂閱</button>
+      </div>
+      <span class="newsletter__note">訂閱即享首購九折優惠碼</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">FANG</div>
+        <p>精緻生活的穿著提案，<br>以時間淬煉的優雅風格。</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Line">LINE</a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h5>精品系列</h5>
+          <ul>
+            <li><a href="#">女裝</a></li>
+            <li><a href="#">男裝</a></li>
+            <li><a href="#">配件</a></li>
+            <li><a href="#">Sale 特賣</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>客戶服務</h5>
+          <ul>
+            <li><a href="#">訂單查詢</a></li>
+            <li><a href="#">退換貨政策</a></li>
+            <li><a href="#">尺寸指南</a></li>
+            <li><a href="#">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>關於 FANG</h5>
+          <ul>
+            <li><a href="#">品牌故事</a></li>
+            <li><a href="#">永續承諾</a></li>
+            <li><a href="#">工藝理念</a></li>
+            <li><a href="#">門市資訊</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 20252025 FANG. All rights reserved.</span>
+      <div class="footer__pay">
+        <span>VISA</span>
+        <span>Mastercard</span>
+        <span>LINE Pay</span>
+        <span>街口支付</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
